@@ -237,7 +237,7 @@ btf.addGlobalFn('pjaxSend', () => {
 <p>在使用 Hexo 时，在写完一些文章/进行一些更改时，我们总是需要手动部署 Hexo ，比如使用 <code>hexo-deployer-git</code> 来使用 git 进行部署。那么，是否可以编写一个 workflow 扔给 GitHub，在我们每次把博客源码推送至 GitHub 仓库时可以自动构建、部署博客？</p>
 <p>当然可以。</p>
 <h2 id="01-原理">01 原理</h2>
-<div class="note warning flat"><p>请注意，以下所述方法，适用于将博客分离为两个仓库–一个为博客源代码仓库，一个为被部署的仓库–的用户使用</p>
+<div class="note warning modern"><p>请注意，以下所述方法，适用于将博客分离为两个仓库–一个为博客源代码仓库，一个为被部署的仓库–的用户使用</p>
 </div>
 <p>GitHub 提供免费的 CI功能，这意味着我们可以利用它，从而实现我们的目标。</p>
 <p>Hexo 提供了一个 <code>generate</code> 的参数，运行 <code>hexo g</code> 可以在博客源代码的根目录里的 <code>public</code> 文件夹下找到我们构建得到的内容。此文件夹内容即需要被推送至被部署的仓库的所有文件。</p>
